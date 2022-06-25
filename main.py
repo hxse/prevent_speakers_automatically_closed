@@ -88,8 +88,8 @@ tray.setContextMenu(menu)
 
 
 sound = "./Silent white noise.wav"
-sound = "./武士刀摆动_爱给网_aigei_com.wav"
-out_sound = create_blank_audio(sound, 1000 * 60 * 3)
+# sound = "./武士刀摆动_爱给网_aigei_com.wav"
+out_sound = create_blank_audio(sound, 1000 * 60 * 1)
 
 playlist = QMediaPlaylist()
 qUrl = QUrl.fromLocalFile(out_sound)
