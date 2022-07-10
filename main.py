@@ -1,4 +1,6 @@
-from hashlib import new
+#!/usr/bin/env python3
+# coding: utf-8
+
 from create_blank_audio import create_blank_audio
 
 from PyQt5.QtGui import *
@@ -6,12 +8,15 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtMultimedia import *
 from PyQt5.QtCore import *
 
+from pydub import AudioSegment
+from pydub.playback import play
+
 
 app = QApplication([])
 app.setQuitOnLastWindowClosed(False)
 
 # Create the icon
-icon = QIcon("icon.png")
+icon = QIcon("./data/icon.png")
 
 # Create the tray
 tray = QSystemTrayIcon()
@@ -87,9 +92,9 @@ menu.addAction(quit)
 tray.setContextMenu(menu)
 
 
-sound = "./Silent white noise.wav"
-# sound = "./武士刀摆动_爱给网_aigei_com.wav"
-out_sound = create_blank_audio(sound, 1000 * 60 * 1)
+sound = "./data/IAddOneSecondForElder_Audio_slient.wav"
+# sound = "./data/武士刀摆动_爱给网_aigei_com.wav"
+out_sound = create_blank_audio(sound, 1000 * 15 * 1)
 
 playlist = QMediaPlaylist()
 qUrl = QUrl.fromLocalFile(out_sound)
