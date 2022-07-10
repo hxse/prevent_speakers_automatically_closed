@@ -1,1 +1,1 @@
-pdm run pyinstaller --add-data "./data;data/" "./main.py"
+pdm run pyinstaller --add-data "./data;data/" -n "prevent_auto_closed" -i "./data/icon.ico" "./main.py"

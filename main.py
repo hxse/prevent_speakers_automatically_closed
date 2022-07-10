@@ -16,7 +16,7 @@ app = QApplication([])
 app.setQuitOnLastWindowClosed(False)
 
 # Create the icon
-icon = QIcon("./data/icon.png")
+icon = QIcon("./data/icon.ico")
 
 # Create the tray
 tray = QSystemTrayIcon()
