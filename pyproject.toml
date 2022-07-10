@@ -8,6 +8,7 @@ authors = [
 dependencies = [
     "PyQt5>=5.15.7",
     "pydub>=0.25.1",
+    "pycaw>=20220416",
 ]
 requires-python = ">=3.10"
 license = {text = "MIT"}

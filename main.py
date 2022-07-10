@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
+from changeVolume import setVolume
 
 from create_blank_audio import create_blank_audio
 
@@ -83,6 +84,11 @@ menu = QMenu()
 #     menu.addAction(actionArr[idx])
 
 
+def songChanged():
+    print("set volume")
+    setVolume()
+
+
 # Add a Quit option to the menu.
 quit = QAction("Quit")
 quit.triggered.connect(app.quit)
@@ -100,6 +106,7 @@ playlist = QMediaPlaylist()
 qUrl = QUrl.fromLocalFile(out_sound)
 playlist.addMedia(QMediaContent(qUrl))
 playlist.setPlaybackMode(QMediaPlaylist.Loop)
+playlist.currentMediaChanged.connect(songChanged)
 
 
 player = QMediaPlayer()
